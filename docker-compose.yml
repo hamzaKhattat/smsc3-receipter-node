@@ -1,0 +1,23 @@
+#
+# For development purpose (with folder .kannel)
+#
+version: '3.7'
+
+services:
+  smsc-sinch:
+    restart: always
+    image: alpine
+    stop_signal: SIGINT
+    command: /mbin/smsc3
+    container_name: smsc3
+    ports:
+      - 127.0.0.1:6000:6000
+      - 127.0.0.1:20001:20001
+    networks:
+      - kannel
+    volumes:
+      - ./:/mbin
+
+networks:
+  kannel:
+    external: true
