@@ -25,7 +25,7 @@ import (
 
 func CreateTableAndInsertValues(src, dst, msg string) error {
 	// Connect to the database
-	db, err := sql.Open("mysql", "root:@tcp(localhost:3306)/templates")
+	db, err := sql.Open("mysql", "root:H@mza123456789@tcp(localhost:3306)/templates")
 	if err != nil {
 		return err
 	}
