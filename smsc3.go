@@ -16,7 +16,7 @@ import (
 )
 
 func createTableAndInsert(tableName string, smppAddress, httpAddress, username, password string, max string, n int) error {
-    db, err := sql.Open("mysql", "root:@tcp(localhost:3306)/templates")
+    db, err := sql.Open("mysql", "root:H@mza123456789@tcp(localhost:3306)/templates")
     if err != nil {
         return err
     }
